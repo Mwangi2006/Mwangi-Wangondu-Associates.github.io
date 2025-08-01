@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Audit Firm Consultation Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #0a2c46;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button {
+      background: #0a2c46;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      width: 100%;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #084064;
+    }
+    .success {
+      background: #e6ffed;
+      border-left: 5px solid #34a853;
+      padding: 1rem;
+      margin-top: 1rem;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <h1 class="logo">Mwangi Wangondu & Associates</h1>
+  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+  <nav>
+    <ul id="navList">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutthefirm.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contactpage.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  header {
+    background-color: #001f3f;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    color: #1e90ff;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+      margin-top: 20px;
+    }
+
+    nav ul.show {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+  function toggleMenu() {
+    var navList = document.getElementById("navList");
+    navList.classList.toggle("show");
+  }
+</script>
+
+
+  <div class="container">
+    <h2>Book a Consultation</h2>
+    <form id="consultationForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <input type="date" id="date" required />
+      <input type="time" id="time" required />
+      <textarea id="message" rows="4" placeholder="Tell us more about your needs..."></textarea>
+      <button type="submit">  <a href="https://forms.gle/HrcdcLzjxCYmZk8q6" class="btn-link" target="_blank">
+    Submit Booking </a></button>
+    </form>
+    <div class="success" id="successMessage">
+      ✅ Your consultation has been booked. We will get in touch soon!
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('consultationForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+
+      if (!name || !email || !phone) {
+        alert('Please fill out all required fields.');
+        return;
+      }
+
+      successMessage.style.display = 'block';
+      form.reset();
+    });
+  </script>
+</body>
+</html>

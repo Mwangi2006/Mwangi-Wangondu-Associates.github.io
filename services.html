@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Our Services - MWANGI WANGONDU & ASSOCIATES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+    }
+    header {
+      background-color: #001f3f;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+    nav ul li a:hover {
+      color: #1e90ff;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      color: white;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 20px;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+    .service-section {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    h2 {
+      color: #003366;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+      font-size: 15px;
+      color: #333;
+    }
+    .carousel-background {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .carousel-background img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .carousel-background img.active {
+      opacity: 1;
+    }
+    .consultation-container {
+      max-width: 600px;
+      margin: -200px auto 2rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 2;
+    }
+    .consultation-container input,
+    .consultation-container textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .consultation-container button {
+      background: #0a2c46;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      width: 100%;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .consultation-container button:hover {
+      background: #084064;
+    }
+    .success {
+      background: #e6ffed;
+      border-left: 5px solid #34a853;
+      padding: 1rem;
+      margin-top: 1rem;
+      display: none;
+    }
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1 class="logo">Mwangi Wangondu & Associates</h1>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
+    <nav>
+      <ul id="navList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutthefirm.html">About</a></li>
+        <li><a href="BOOKACONSULTATION.html">Book A Consultation</a></li>
+        <li><a href="contactpage.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SERVICES -->
+  <div class="container">
+    <div class="service-section">
+      <h2>Audit, Assurance & Advisory</h2>
+      <ul>
+        <li>Annual statutory audit services – External audit</li>
+        <li>Financial Statements Audit</li>
+        <li>Internal Audit Services</li>
+        <li>Information Risk Management</li>
+        <li>Regulatory and Compliance Services</li>
+        <li>Program Management and Quality Assurance</li>
+        <li>Financial Risk Management</li>
+        <li>Accounting Advisory Services</li>
+        <li>Business Performance Services</li>
+        <li>People Advisory Services</li>
+      </ul>
+    </div>
+    <div class="service-section">
+      <h2>Tax Services</h2>
+      <ul>
+        <li>Business Tax Consulting – Tax planning</li>
+        <li>Tax exemption processing</li>
+        <li>Financial Services Taxation</li>
+        <li>Tax Litigation with KRA (Kenya Revenue Authority)</li>
+        <li>International Taxation Services</li>
+        <li>Transfer pricing</li>
+        <li>International Executive Services</li>
+        <li>VAT (Monthly returns, claims processing)</li>
+        <li>Customs and Excise</li>
+        <li>Investor Advisory</li>
+        <li>Filing Statutory Returns</li>
+        <li>Legal Compliance Advisory</li>
+      </ul>
+    </div>
+    <div class="service-section">
+      <h2>Financial System Services</h2>
+      <ul>
+        <li>ERP implementation (SAP, SAGE, TALLY)</li>
+        <li>System Audit Services</li>
+        <li>System Training</li>
+      </ul>
+    </div>
+    <div class="service-section">
+      <h2>Financial Advisory Services</h2>
+      <ul>
+        <li>Acquisitions and Disposals</li>
+        <li>Business Valuations</li>
+        <li>Privatization Financial Restructuring</li>
+        <li>Insolvency Services</li>
+        <li>Business Turnaround</li>
+        <li>Risk Management</li>
+        <li>Anti-Money Laundering</li>
+        <li>Fraud, Investigation</li>
+        <li>Ethics and Integrity</li>
+        <li>Regulatory Investigations</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- BACKGROUND CAROUSEL -->
+  <div class="carousel-background">
+    <img src="https://www.isotracker.com/wp-content/uploads/2014/10/quality-audits.jpg" class="active" />
+    <img src="https://media.licdn.com/dms/image/v2/D4D12AQG7CeWMqMqLMA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1713990266219?e=2147483647&v=beta&t=_qAbf0UMT_05fI8xi8vNAdDRqmBWKAMK8gsA-8rshgw" />
+    <img src="https://www.grantthornton.in/globalassets/1.-member-firms/india/assets/pdf-images/1200x627px/1200x627px-ogi-financial-reporting-advisory-services.jpg" />
+  </div>
+
+  <!-- CONSULTATION BOOKING -->
+  <section class="consultation-container">
+    <h2>Book a Consultation</h2>
+    <form id="consultationForm">
+      <input type="text" id="name" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email Address" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <input type="date" id="date" required />
+      <input type="time" id="time" required />
+      <textarea id="message" rows="4" placeholder="Tell us more about your needs..."></textarea>
+     <button type="submit">  <a href="https://forms.gle/HrcdcLzjxCYmZk8q6" class="btn-link" target="_blank">
+    Submit Booking </a></button>
+    </form>
+    <div class="success" id="successMessage">
+      ✅ Your consultation has been booked. We will get in touch soon!
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 Mwangi Wangondu & Associates. All rights reserved.
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMenu() {
+      var navList = document.getElementById("navList");
+      navList.classList.toggle("show");
+    }
+
+    document.getElementById('consultationForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      if (!name || !email || !phone) {
+        alert('Please fill out all required fields.');
+        return;
+      }
+      document.getElementById('successMessage').style.display = 'block';
+      this.reset();
+    });
+
+    const bgImages = document.querySelectorAll('.carousel-background img');
+    let bgIndex = 0;
+    setInterval(() => {
+      bgImages[bgIndex].classList.remove('active');
+      bgIndex = (bgIndex + 1) % bgImages.length;
+      bgImages[bgIndex].classList.add('active');
+    }, 4000);
+  </script>
+
+</body>
+</html>
